@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using The49.Maui.BottomSheet;
 
 namespace MauiBottomSheetSample;
 
@@ -9,6 +10,7 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
+			.UseBottomSheet()
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

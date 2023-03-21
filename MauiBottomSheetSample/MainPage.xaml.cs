@@ -2,7 +2,6 @@
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
 
 	public MainPage()
 	{
@@ -11,14 +10,11 @@ public partial class MainPage : ContentPage
 
 	private void OnCounterClicked(object sender, EventArgs e)
 	{
-		count++;
+		var page = new MyBottomSheet();
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
+		page.ShowHandle = true;
 
-		SemanticScreenReader.Announce(CounterBtn.Text);
+		page.Show(Window);
 	}
 }
 
