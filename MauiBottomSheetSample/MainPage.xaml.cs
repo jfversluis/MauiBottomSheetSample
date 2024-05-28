@@ -8,13 +8,14 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 	}
 
-	private void OnCounterClicked(object sender, EventArgs e)
+	private async void OnCounterClicked(object sender, EventArgs e)
 	{
 		var page = new MyBottomSheet();
 
-		page.ShowHandle = true;
+		page.HasHandle = true;
+		page.HandleColor = Colors.Red;
 
-		page.Show(Window);
+		await page.ShowAsync(Window);
 	}
 }
 
